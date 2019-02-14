@@ -183,7 +183,7 @@ public class AboutConditionals {
         }
         assertEquals(x, "kthxbai");
         assertEquals(trueCount.count, 1);
-        assertEquals(falseCount.count, 1); //why?? look into single-bar logic
+        assertEquals(falseCount.count, 1); //
     }
     
     class Counter {
