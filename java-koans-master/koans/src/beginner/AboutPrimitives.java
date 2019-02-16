@@ -56,100 +56,100 @@ public class AboutPrimitives {
 
     @Koan
     public void wholeNumbersCanAlsoBeOfTypeShort() {
-        assertEquals(getType((short) 1), __); // The '(short)' is called an explicit cast - to type 'short'
+        assertEquals(getType((short) 1), short.class); // The '(short)' is called an explicit cast - to type 'short'
     }
 
     @Koan
     public void primitivesOfTypeShortHaveAnObjectTypeShort() {
         Object number = (short) 1;
-        assertEquals(getType(number), __);
+        assertEquals(getType(number), Short.class);
     }
 
     @Koan
     public void shortsHaveASmallerRangeThanInts() {
-        assertEquals(Short.MIN_VALUE, __);  // hint: You'll need an explicit cast
-        assertEquals(Short.MAX_VALUE, __);
+        assertEquals(Short.MIN_VALUE, (short) -32768);  // hint: You'll need an explicit cast
+        assertEquals(Short.MAX_VALUE, (short) 32767);
     }
 
     @Koan
     public void shortSize() {
-        assertEquals(Short.SIZE, __);
+        assertEquals(Short.SIZE, 16);
     }
 
     @Koan
     public void wholeNumbersCanAlsoBeOfTypeByte() {
-        assertEquals(getType((byte) 1), __);
+        assertEquals(getType((byte) 1), byte.class);
     }
 
     @Koan
     public void primitivesOfTypeByteHaveAnObjectTypeByte() {
         Object number = (byte) 1;
-        assertEquals(getType(number), __);
+        assertEquals(getType(number), Byte.class);
     }
 
     @Koan
     public void bytesHaveASmallerRangeThanShorts() {
-        assertEquals(Byte.MIN_VALUE, __);
-        assertEquals(Byte.MAX_VALUE, __);
+        assertEquals(Byte.MIN_VALUE, (byte) -128);
+        assertEquals(Byte.MAX_VALUE, (byte) 127);
 
         // Why would you use short or byte considering that you need to do explicit casts?
     }
 
     @Koan
     public void byteSize() {
-        assertEquals(Byte.SIZE, __);
+        assertEquals(Byte.SIZE, 8);
     }
 
     @Koan
     public void wholeNumbersCanAlsoBeOfTypeChar() {
-        assertEquals(getType((char) 1), __);
+        assertEquals(getType((char) 1), char.class);
     }
 
     @Koan
     public void singleCharactersAreOfTypeChar() {
-        assertEquals(getType('a'), __);
+        assertEquals(getType('a'), char.class);
     }
 
     @Koan
     public void primitivesOfTypeCharHaveAnObjectTypeCharacter() {
         Object number = (char) 1;
-        assertEquals(getType(number), __);
+        assertEquals(getType(number), Character.class);
     }
 
     @Koan
     public void charsCanOnlyBePositive() {
-        assertEquals((int) Character.MIN_VALUE, __);
-        assertEquals((int) Character.MAX_VALUE, __);
+        assertEquals((int) Character.MIN_VALUE, 0);
+        assertEquals((int) Character.MAX_VALUE, 65535);
 
         // Why did we cast MIN_VALUE and MAX_VALUE to int? Try it without the cast.
     }
 
     @Koan
     public void charSize() {
-        assertEquals(Character.SIZE, __);
+        assertEquals(Character.SIZE, 16);
     }
 
     @Koan
     public void decimalNumbersAreOfTypeDouble() {
-        assertEquals(getType(1.0), __);
+        assertEquals(getType(1.0), double.class);
     }
 
     @Koan
     public void primitivesOfTypeDoubleCanBeDeclaredWithoutTheDecimalPoint() {
-        assertEquals(getType(1d), __);
+        assertEquals(getType(1d), double.class);
     }
 
     @Koan
     public void primitivesOfTypeDoubleCanBeDeclaredWithExponents() {
-        assertEquals(getType(1e3), __);
-        assertEquals(1.0e3, __);
-        assertEquals(1E3, __);
+        assertEquals(getType(1e3), double.class);
+        assertEquals(1.0e3, 1000.0);
+        assertEquals(1E3, (double)1000);
     }
 
     @Koan
     public void primitivesOfTypeDoubleHaveAnObjectTypeDouble() {
         Object number = 1.0;
-        assertEquals(getType(number), __);
+        assertEquals(getType(number), Double.class);
     }
 
     @Koan
