@@ -63,6 +63,6 @@ public class AboutBitwiseOperators {
         unsignedRightShift >>>= 4; // Just like +=
         assertEquals(unsignedRightShift, 0x08000000);
 
-        // >> is signed shift, >>> is unsigned shift. Noted for future use. 
+        // >> is signed shift, >>> is unsigned shift. Noted for future use.
     }
 }
